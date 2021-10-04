@@ -1,9 +1,12 @@
 import './App.css';
+import Counter from './components/Counter';
+import Counter2 from './components/Counter2';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello from App</h1>
+      <Counter />
+      <Counter2 />
     </div>
   );
 }
