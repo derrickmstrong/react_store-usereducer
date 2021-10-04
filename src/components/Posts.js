@@ -6,7 +6,6 @@ import { PostsActions } from '../store';
 
 const Posts = () => {
   const { loading, posts, error } = useSelector(state => state.posts);
-  console.log(posts);
   const dispatch = useDispatch();
   const { fetchPosts } = bindActionCreators(PostsActions, dispatch);
 
