@@ -1,0 +1,21 @@
+import axios from 'axios';
+import * as ActionTypes from '../actionTypes';
+
+export const fetchPosts = () => async (dispatch, getState) => {
+    dispatch({
+        type: ActionTypes.FETCH_POSTS_LOADING
+    })
+
+    try {
+        const response = await axios.get(``)
+        dispatch({
+            type: ActionTypes.FETCH_POSTS_SUCCESS,
+            payload: response.data
+        })
+    } catch (error) {
+        dispatch({
+            type: ActionTypes.FETCH_POSTS_ERROR,
+            payload: error
+        })
+    }
+} 
