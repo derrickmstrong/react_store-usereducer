@@ -17,7 +17,7 @@ export const postsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                post: action.payload
+                posts: action.payload
             }
         case ActionTypes.FETCH_POSTS_ERROR:
             return {
